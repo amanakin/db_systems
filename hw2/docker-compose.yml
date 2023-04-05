@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    environment:
+      - PUID=1001
+      - PGID=1001
+    volumes:
+      - /Users/anton/Projects/db_systems/mongodata:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
