@@ -14,6 +14,11 @@
 
 ![Insight image](./img/insight.png)
 
+Перед прогоном бенчмарков: 
+```shell
+unzip data/games.zip -d ./data
+```
+
 ### Benchmarks
 
 Подробный отчет можно посмотреть в [benchmark.ipynb](./benchmark.ipynb).
