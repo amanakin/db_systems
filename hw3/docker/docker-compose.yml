@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  redis-master:
+      image: 'redis:6.2-alpine'
+      command: redis-server /usr/local/etc/redis/redis.conf
+      ports:
+        - '6370:6370'
+      volumes:
+        - ./master.conf:/usr/local/etc/redis/redis.conf
+      networks:
+        app_subnet:
+          ipv4_address: 172.20.0.51
+  redis-slave-1:
+      image: 'redis:6.2-alpine'
+      command: redis-server /usr/local/etc/redis/redis.conf
+      volumes:
+        - ./slave.conf:/usr/local/etc/redis/redis.conf
+      networks:
+        app_subnet:
+          ipv4_address: 172.20.0.52
+  redis-slave-2:
+      image: 'redis:6.2-alpine'
+      command: redis-server /usr/local/etc/redis/redis.conf
+      volumes:
+        - ./slave.conf:/usr/local/etc/redis/redis.conf
+      networks:
+        app_subnet:
+          ipv4_address: 172.20.0.53
+
+networks:
+  app_subnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
