@@ -1,0 +1,6 @@
+networks:
+  app_subnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.0.0/24
