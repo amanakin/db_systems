@@ -1,7 +1,5 @@
 # Apache Jackrabbit
 
----
-
 ### История
 
 Apache Jackrabbit — это репозиторий контента с открытым исходным кодом на основе Java,
