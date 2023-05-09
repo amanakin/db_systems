@@ -34,7 +34,7 @@ Apache Jackrabbit — это репозиторий контента с откр
 которая под капотом поддерживает _транзакции_, _репликацию_ и _высокую доступность_.
 
 **Пример использования пользователем:**
-![Browser with Jackrabbit](img/BrowserWebDAV.png "Browser with Jackrabbit")
+![Browser with Jackrabbit](img/BrowserWebDav.png "Browser with Jackrabbit")
 ![Finder with Jackrabbit](img/FinderWebDAV.png "Finder with Jackrabbit")
 
 **Пример использования Oak**:
